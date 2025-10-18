@@ -1,0 +1,10 @@
+{ 
+    "expenses":
+    [
+        {
+            "expenseName":"",
+            "expenseDescription":"",
+            "amount":""
+        }
+    ]
+}
