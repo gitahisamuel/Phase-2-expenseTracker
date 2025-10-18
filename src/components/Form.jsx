@@ -25,12 +25,16 @@ const handleChange = (e) => {
 
 
 
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   console.log(formData);
 
-
+   const response = await fetch("http://localhost:5000/expenses", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 };
 
   return (
@@ -44,12 +48,12 @@ const handleSubmit = (e) => {
 
         <div className="form-group">
           <label>Expense Description:</label>
-          <input type="text" name="expenseDescription" value={formData.expenseName}onChange={handleChange}/>
+          <input type="text" name="expenseDescription" value={formData.expenseDescription}onChange={handleChange}/>
         </div>
 
         <div className="form-group">
           <label>Amount:</label>
-          <input type="text" name="amount" />
+          <input type="number" name="amount" value={formData.amount}onChange={handleChange} />
         </div>
 
         <button type="submit" >Submit</button>

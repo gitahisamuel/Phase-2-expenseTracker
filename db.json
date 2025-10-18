@@ -1,10 +1,10 @@
-{ 
-    "expenses":
-    [
-        {
-            "expenseName":"",
-            "expenseDescription":"",
-            "amount":""
-        }
-    ]
+{
+  "expenses": [
+    {
+      "id": "7395",
+      "expenseName": "Purchase M5",
+      "expenseDescription": "Need",
+      "amount": "8"
+    }
+  ]
 }
